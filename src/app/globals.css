@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-dark-brand: #f7971e;
+  --color-light-brand: #ffd200;
+  --color-dark-gray: #414042;
+  --color-light-gray: #d1d3d4;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.document p {
+  margin-bottom: 20px;
+  color: #414042;
+}
+
+.document figure {
+  width: 100% !important;
+}
+
+.document img {
+  width: 100%;
+}
+
+.document a {
+  color: #f7971e;
+}
+
+.document a:hover {
+  color: #f7461e;
+  text-decoration: underline;
+}
+
+figure img {
+  width: 100%;
+}
+.document .aligncenter {
+  margin: auto;
+}
+
+.document .alignleft {
+  margin-right: auto;
+}
+
+.document .alignright {
+  margin-left: auto;
+}
+
+.document figcaption {
+  color: #414042;
+  font-size: small;
+  font-style: italic;
+}
+
+.document > h2 {
+  font-size: 1.938rem;
+  color: #f7971e;
+}
+
+.document > h3 {
+  font-size: 1.838rem;
+  color: #f7971e;
+}
+
+.document > h4 {
+  font-size: 1.738rem;
+  color: #f7971e;
+}
+
+.document ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.document ul li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Tùy chỉnh dấu chấm (•) bằng pseudo-element */
+.document ul li::before {
+  content: "\2022"; /* Hoặc có thể dùng "\2022" cho dấu mặc định */
+  color: #f7971e;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* Danh sách có thứ tự (ol) */
+.document ol {
+  list-style-type: decimal; /* Số thứ tự (1, 2, 3, ...) */
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.document ol li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 5px;
+}
+
+/* Tạo khoảng cách cho số thứ tự trong ol */
+.document ol li::marker {
+  font-weight: bold;
+  color: #f7971e;
+}
+
+pre.wp-block-code {
+  background-color: #333; /* Màu xám đậm */
+  color: #fff; /* Màu chữ trắng */
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 12px;
+  border-radius: 8px; /* Bo góc */
+  max-width: 100%; /* Không vượt quá chiều rộng */
+  overflow-x: auto; /* Cuộn ngang nếu nội dung dài */
+  white-space: pre-wrap; /* Xuống dòng nếu quá dài */
+  word-wrap: break-word; /* Đảm bảo từ không bị tràn */
+}
+
+pre.wp-block-code code {
+  background: none; /* Loại bỏ nền mặc định của code */
+  color: #fff;
+  font-size: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .document p {
+    color: #d1d3d4;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .document ul li {
+    color: #d1d3d4;
+  }
+  .document ol li {
+    color: #d1d3d4;
+  }
 }
