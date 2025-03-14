@@ -8,7 +8,7 @@ This is a blog project build with [Next.js](https://nextjs.org) + WordPress Head
 - Docker & Docker Compose
 - NodeJs >= v.20
 
-First, run the development server:
+First, run:
 
 ```bash
 git clone https://github.com/derrick-nguyen/nextjs-wordpress-blog-starter.git
