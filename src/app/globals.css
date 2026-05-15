@@ -208,7 +208,7 @@ hr.wp-block-separator.has-alpha-channel-opacity {
 }
 
 .wp-block-table thead {
-  background: linear-gradient(135deg, #f97316, #fb923c);
+  background: #f7971e;
 }
 
 .wp-block-table thead td {
@@ -238,16 +238,6 @@ hr.wp-block-separator.has-alpha-channel-opacity {
   line-height: 1.7;
   color: #334155;
   vertical-align: middle;
-}
-
-.wp-block-table tbody td:first-child {
-  color: #dc2626;
-  font-weight: 500;
-}
-
-.wp-block-table tbody td:last-child {
-  color: #16a34a;
-  font-weight: 600;
 }
 
 /* Mobile */
