@@ -129,6 +129,56 @@ pre.wp-block-code code {
   font-size: inherit;
 }
 
+.document blockquote {
+  position: relative;
+  margin: 24px 0;
+  padding: 20px 24px;
+  border-left: 4px solid #f97316;
+  background: #fff7ed;
+  border-radius: 12px;
+  font-style: italic;
+  color: #444;
+  line-height: 1.8;
+}
+
+.document blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-size: 64px;
+  color: rgba(249, 115, 22, 0.2);
+  font-family: serif;
+  line-height: 1;
+}
+
+.document blockquote p {
+  margin: 0;
+}
+
+.document blockquote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-style: normal;
+  color: #666;
+  text-align: right;
+}
+
+hr.wp-block-separator.has-alpha-channel-opacity {
+  border: none;
+  height: 1px;
+  margin: 40px auto;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
+  opacity: 0.8;
+}
+
 @media (prefers-color-scheme: dark) {
   .document p {
     color: #d1d3d4;
