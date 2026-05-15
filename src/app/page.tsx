@@ -28,7 +28,9 @@ export default async function Home({ searchParams }: HomeProps) {
 
   const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/posts?${paramsAPI.toString()}`;
   try {
-    const response = await fetch(apiUrl, { next: { revalidate: 3600 } });
+    const response = await fetch(apiUrl, {
+      cache: "no-store",
+    });
 
 
     if (!response.ok) {
